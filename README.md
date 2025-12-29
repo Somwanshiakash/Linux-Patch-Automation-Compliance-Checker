@@ -42,36 +42,4 @@ patch management workflow.
 ---
 
 ## Architecture
-┌───────────────────────────────┐
-│        Linux Server            │
-│  (Ubuntu / RHEL / CentOS)      │
-└───────────────┬───────────────┘
-                │
-                │ Execute
-                ▼
-┌───────────────────────────────┐
-│   scripts/patch_update.sh      │
-│  (Bash Automation Script)      │
-└───────────────┬───────────────┘
-                │
-   ┌────────────┼─────────────┐
-   ▼            ▼             ▼
-┌─────────┐ ┌──────────┐ ┌──────────┐
-│ OS      │ │ Package  │ │ Reboot   │
-│ Detect  │ │ Update   │ │ Check    │
-│         │ │ apt/yum  │ │          │
-└────┬────┘ └────┬─────┘ └────┬─────┘
-     │            │            │
-     └────────────┴────────────┘
-                  │
-                  ▼
-        ┌──────────────────────┐
-        │ logs/patch.log        │
-        │ (Execution Logs)      │
-        └──────────────────────┘
-                  │
-                  ▼
-        ┌──────────────────────┐
-        │ reports/patch_report │
-        │ (Compliance Output)  │
-        └──────────────────────┘
+linux-patch-automation/ │ ├── scripts/ │ └── patch_update.sh │ ├── logs/ │ └── patch.log │ ├── reports/ │ └── patch_report.txt │ └── README.md
