@@ -29,7 +29,6 @@ This project solves these issues by providing an **automated, repeatable, and au
 patch management workflow.
 
 ---
-
 ## Key Features
 - Automated Linux patch management using Bash
 - OS detection (Ubuntu, Debian, RHEL, CentOS, Amazon Linux)
